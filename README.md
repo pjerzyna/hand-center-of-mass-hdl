@@ -32,9 +32,5 @@ This project implements a hardware-based algorithm for detecting the centroid (c
 - Xilinx Kria KV260 (or compatible)
 - MIPI camera module (e.g., OV5640)
 
-## License
-This project is licensed under the MIT License.
 
----
-
-Feel free to contribute or fork. For academic use, please cite the original repository.
+🛠️ Project created for academic purposes during the *Reconfigurable Systems* course at AGH Cracow.
