@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../video_passthrough_kria.gen/sources_1/ip/c_addsub_1_1/sim/c_addsub_1.vhd" \
+
+nosort

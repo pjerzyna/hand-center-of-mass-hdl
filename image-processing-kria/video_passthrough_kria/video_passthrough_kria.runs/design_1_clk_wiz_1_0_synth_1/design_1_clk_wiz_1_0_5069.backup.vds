@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Apr 16 17:16:30 2025
+# Process ID: 5069
+# Current directory: /home/pawsooon/Vivado/tor_wizyjny/video_passthrough_kria/video_passthrough_kria.runs/design_1_clk_wiz_1_0_synth_1
+# Command line: vivado -log design_1_clk_wiz_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_clk_wiz_1_0.tcl
+# Log file: /home/pawsooon/Vivado/tor_wizyjny/video_passthrough_kria/video_passthrough_kria.runs/design_1_clk_wiz_1_0_synth_1/design_1_clk_wiz_1_0.vds
+# Journal file: /home/pawsooon/Vivado/tor_wizyjny/video_passthrough_kria/video_passthrough_kria.runs/design_1_clk_wiz_1_0_synth_1/vivado.jou
+# Running On: Asus-Vivobook, OS: Linux, CPU Frequency: 1100.093 MHz, CPU Physical cores: 12, Host memory: 16420 MB
+#-----------------------------------------------------------
+source design_1_clk_wiz_1_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1705.844 ; gain = 14.023 ; free physical = 3173 ; free virtual = 8248
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_clk_wiz_1_0
+Command: synth_design -top design_1_clk_wiz_1_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5310

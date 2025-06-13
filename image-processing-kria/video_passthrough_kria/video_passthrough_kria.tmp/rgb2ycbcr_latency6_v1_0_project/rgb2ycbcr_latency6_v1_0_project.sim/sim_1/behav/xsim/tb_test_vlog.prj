@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog   \
+"../../../../../../../../ip_repository/rgb_2_ycbcr/src/opoznienie2.v" \
+"../../../../../../../../ip_repository/rgb_2_ycbcr/src/rgb2ycbcr.v" \
+"../../../../../../../../ip_repository/rgb_2_ycbcr/src/tb_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

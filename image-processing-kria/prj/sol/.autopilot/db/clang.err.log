@@ -1,0 +1,4 @@
+/home/pawsooon/Vivado/tor_wizyjny/prj/sol/.autopilot/db/v_tpg.cpp:383:33: warning: extra token before variable expression is ignored [-Wextra-tokens]
+#pragma HLS INTERFACE axis port=&s_axis_video register
+                                ^
+1 warning generated.

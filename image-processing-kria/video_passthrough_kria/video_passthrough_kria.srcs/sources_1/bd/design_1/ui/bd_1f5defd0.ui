@@ -1,0 +1,38 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.571283",
+   "Default View_TopLeft":"-285,-42",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port IIC_1_0 -pg 1 -lvl 5 -x 1520 -y 220 -defaultsOSRD
+preplace port mipi_phy_if_0 -pg 1 -lvl 0 -x -140 -y 230 -defaultsOSRD
+preplace portBus rpi_enable -pg 1 -lvl 5 -x 1520 -y 440 -defaultsOSRD
+preplace portBus sw -pg 1 -lvl 0 -x -140 -y 750 -defaultsOSRD
+preplace inst PS_0 -pg 1 -lvl 2 -x 470 -y 270 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -x 470 -y 490 -defaultsOSRD
+preplace inst preprocess_0 -pg 1 -lvl 4 -x 1340 -y 300 -defaultsOSRD
+preplace inst postprocess_0 -pg 1 -lvl 1 -x 40 -y 340 -defaultsOSRD
+preplace inst vision_system_0 -pg 1 -lvl 2 -x 470 -y 700 -defaultsOSRD
+preplace netloc PS_0_clk_out1 1 1 2 250 410 710
+preplace netloc PS_0_vid_active_video 1 1 2 220 400 660
+preplace netloc PS_0_vid_data 1 2 2 720 300 N
+preplace netloc PS_0_vid_hsync 1 1 2 230 420 680
+preplace netloc PS_0_vid_vsync 1 1 2 240 430 670
+preplace netloc postprocess_0_video_out 1 1 1 200 290n
+preplace netloc preprocess_0_video_out 1 1 4 200 390 NJ 390 N 390 1500
+preplace netloc sw 1 0 2 NJ 750 N
+preplace netloc vision_system_0_de_out 1 1 2 210 550 660
+preplace netloc vision_system_0_hsync_out 1 1 2 240 370 700
+preplace netloc vision_system_0_pixel_out 1 0 3 -120 560 NJ 560 670
+preplace netloc vision_system_0_vsync_out 1 1 2 250 380 690
+preplace netloc xlconstant_1_dout 1 2 3 NJ 490 N 490 1500
+preplace netloc mipi_phy_if_0_1 1 0 2 NJ 230 N
+preplace netloc zynq_ultra_ps_e_0_IIC_1 1 2 3 NJ 220 N 220 N
+levelinfo -pg 1 -140 40 470 820 1340 1520
+pagesize -pg 1 -db -bbox -sgen -290 -250 1680 1460
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}
