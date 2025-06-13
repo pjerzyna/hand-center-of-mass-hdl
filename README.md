@@ -5,13 +5,7 @@ This project implements a hardware-based algorithm for detecting the centroid (c
 ## 🔍 Dłoń – kolejne fazy przetwarzania
 
 <p align="center">
-  <img src="img/0_raw_passthrough.ppm" width="100"/>
-  <img src="img/1_ycbcr.ppm" width="100"/>
-  <img src="img/2_lut_bin.ppm" width="100"/>
-  <img src="img/3_ycbcr_bin.ppm" width="100"/>
-  <img src="img/4_centroid_ycbcr_mask.ppm" width="100"/>
-  <img src="img/5_median_filtrarion.ppm" width="100"/>
-  <img src="img/6_centroid_after_median_filter.ppm" width="100"/>
+  <img src="img/combined_hand_pipeline.png.ppm" width="100"/>
 </p>
 
 ---
