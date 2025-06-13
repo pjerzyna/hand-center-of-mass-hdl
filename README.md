@@ -24,18 +24,23 @@ from raw camera passthrough to binary segmentation and centroid detection:
 
 ## 🗂️ Project Structure
 
+```
 hand-center-of-mass-hdl/
+
 ├── image-processing-kria/ # Verilog and Vivado files
 ├── image_pipeline_codes/  # MATLAB/Python preprocessing scripts
 ├── img/                   # Images for documentation
 └── README.md
+```
 
-## Features
-- Real-time video input from camera
-- Binary segmentation using YCbCr thresholding or LUT
-- Median filtering 
-- Centroid calculation of objects
-- Switch-selectable output visualization
+## ⚡ Key Capabilities
+
+- Real-time video capture and processing from live camera feed
+- YCbCr-based binary segmentation or LUT-based thresholding
+- Noise reduction via configurable 5x5 median filter
+- Efficient centroid computation for binary hand masks
+- Switch-driven visualization of each processing stage (for testing/debug)
+
 
 ## 🧠 Software Preprocessing Tools
 
@@ -80,10 +85,10 @@ video_passthrough_kria/video_passthrough_kria.sim/sim_1/behav/xsim/
 </p>
 
 
-## Dependencies
-- Vivado 2022.2
-- Xilinx Kria KV260 (or compatible)
-- MIPI camera module (e.g., OV5640)
+### 📚 Academic Context
 
+This project was developed as part of the *Reconfigurable Systems* course  
+at **AGH University of Science and Technology** in Kraków.
 
-🛠️ Project created for academic purposes during the *Reconfigurable Systems* course at AGH Cracow.
+> 💡 Focus was placed on implementing real-time image processing in Verilog,  
+> validating the design in simulation, and deploying it on an embedded FPGA platform.
