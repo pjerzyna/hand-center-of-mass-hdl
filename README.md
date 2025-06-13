@@ -2,12 +2,14 @@
 
 This project implements a hardware-based algorithm for detecting the centroid (center of mass) of a human hand in a binary image. It uses contextual operations, color space conversion (RGB to YCbCr), thresholding, and optional 5x5 median filtering — all in Verilog, targeting the Xilinx Kria (KV260) FPGA platform.
 
-## 🔍 Dłoń – kolejne fazy przetwarzania
+## 🖐️ Hand Processing Pipeline Overview
+
+The following diagram illustrates the sequential stages in hand image processing,
+from raw camera passthrough to binary segmentation and centroid detection:
 
 <p align="center">
-  <img src="img/combined_hand_pipeline.png.ppm" width="100"/>
+  <img src="img/combined_hand_pipeline.png" width="100%"/>
 </p>
-
 ---
 
 ## Features
