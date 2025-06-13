@@ -1,6 +1,14 @@
 # FPGA Hand Centroid Detection on Xilinx Kria
 
-This project implements a hardware-based algorithm for detecting the centroid (center of mass) of a human hand in a binary image. It uses contextual operations, color space conversion (RGB to YCbCr), thresholding, and optional 5x5 median filtering — all in Verilog, targeting the Xilinx Kria (KV260) FPGA platform.
+This project implements a hardware-based algorithm for detecting the centroid (center of mass) of a human hand in a binary image. It uses contextual operations, color space conversion (RGB to YCbCr), thresholding, and 5x5 median filtering — all in Verilog, targeting the Xilinx Kria (KV260) FPGA platform.
+
+## 🗂️ Project Structure
+
+hand-center-of-mass-hdl/
+├── hdl/ # Verilog and Vivado files
+├── image_pipeline_codes/ # MATLAB/Python preprocessing scripts
+├── img/ # Images for documentation
+└── README.md
 
 ## 🖐️ Hand Processing Pipeline Overview
 
@@ -10,21 +18,6 @@ from raw camera passthrough to binary segmentation and centroid detection:
 <p align="center">
   <img src="img/combined_hand_pipeline.png" width="100%"/>
 </p>
----
-
-## Features
-- Real-time video input from camera
-- Binary segmentation using YCbCr thresholding or LUT
-- Median filtering (optional)
-- Centroid calculation of white objects
-- Switch-selectable output visualization
-
-## Getting Started
-
-1. Open Vivado 2022.2 or compatible.
-2. Load the `video_passthrough_kria.xpr` project file.
-3. Generate bitstream and export hardware with `.xsa`.
-4. Load design via Vitis or JTAG.
 
 ### Switch Control (`sw[3:0]`)
 | sw | Output Channel                  |
@@ -33,19 +26,62 @@ from raw camera passthrough to binary segmentation and centroid detection:
 | 1  | YCbCr color-converted image     |
 | 2  | LUT binarized (RGB thresholding)|
 | 3  | YCbCr binarized                 |
-| 4  | Centroid marked (YCbCr mask)    |
+| 4  | Centroid (YCbCr mask)    |
 | 5  | Median filtered mask            |
 | 6  | Centroid after median filter    |
 
+
+## Features
+- Real-time video input from camera
+- Binary segmentation using YCbCr thresholding or LUT
+- Median filtering 
+- Centroid calculation of objects
+- Switch-selectable output visualization
+
+## 🧠 Software Preprocessing Tools
+
+The `image_pipeline_codes/` directory contains MATLAB and Python scripts used to:
+- Convert RGB images to YCbCr using fixed-point arithmetic
+- Detect and mark the centroid of the hand
+
+These tools help validate and visualize the expected hardware behavior.
+
+## 🛠️ Getting Started
+
+### 🔧 Vivado Hardware Setup
+
+1. Open **Vivado 2022.2** or a compatible version.
+2. Navigate to the `hdl/` directory and open the project file:  
+   `video_passthrough_kria.xpr`
+3. Generate the bitstream:  
+   `Flow Navigator → Program and Debug → Generate Bitstream`
+4. Export the hardware design (with `.xsa`) for use in **Vitis** or JTAG loading:  
+   `File → Export → Export Hardware (include bitstream)`
+
 ---
 
-## 📷 Diagram systemu
+### 🧪 Behavioral Simulation (Optional)
+
+To simulate processing stages and observe switching behavior:
+
+1. Run **Behavioral Simulation** in Vivado:  
+   `Flow Navigator → Simulation → Run Simulation → Run Behavioral Simulation`
+2. Apply a stimulus to the `sw` input (values 0–6) using the **Force Constant** tool in the waveform GUI.
+3. Observe the simulated results.
+
+Simulation artifacts will be located in:
+
+video_passthrough_kria/video_passthrough_kria.sim/sim_1/behav/xsim/
+
+---
+
+
+## 🧩 System Block Diagram
 
 <p align="center">
   <img src="img/Block-Design.png" width="600"/>
 </p>
 
----
 
 ## Dependencies
 - Vivado 2022.2
