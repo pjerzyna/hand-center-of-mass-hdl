@@ -1,14 +1,6 @@
-# FPGA Hand Centroid Detection on Xilinx Kria
+# 📟 FPGA Hand Centroid Detection on Xilinx Kria
 
 This project implements a hardware-based algorithm for detecting the centroid (center of mass) of a human hand in a binary image. It uses contextual operations, color space conversion (RGB to YCbCr), thresholding, and 5x5 median filtering — all in Verilog, targeting the Xilinx Kria (KV260) FPGA platform.
-
-## 🗂️ Project Structure
-
-hand-center-of-mass-hdl/
-├── hdl/ # Verilog and Vivado files
-├── image_pipeline_codes/ # MATLAB/Python preprocessing scripts
-├── img/ # Images for documentation
-└── README.md
 
 ## 🖐️ Hand Processing Pipeline Overview
 
@@ -19,7 +11,7 @@ from raw camera passthrough to binary segmentation and centroid detection:
   <img src="img/combined_hand_pipeline.png" width="100%"/>
 </p>
 
-### Switch Control (`sw[3:0]`)
+## 🔀 Switch Control (`sw[3:0]`)
 | sw | Output Channel                  |
 |----|---------------------------------|
 | 0  | Raw video passthrough           |
@@ -30,6 +22,13 @@ from raw camera passthrough to binary segmentation and centroid detection:
 | 5  | Median filtered mask            |
 | 6  | Centroid after median filter    |
 
+## 🗂️ Project Structure
+
+hand-center-of-mass-hdl/
+├── image-processing-kria/ # Verilog and Vivado files
+├── image_pipeline_codes/  # MATLAB/Python preprocessing scripts
+├── img/                   # Images for documentation
+└── README.md
 
 ## Features
 - Real-time video input from camera
@@ -47,20 +46,18 @@ The `image_pipeline_codes/` directory contains MATLAB and Python scripts used to
 These tools help validate and visualize the expected hardware behavior.
 
 ## 🛠️ Getting Started
-
 ### 🔧 Vivado Hardware Setup
 
 1. Open **Vivado 2022.2** or a compatible version.
 2. Navigate to the `hdl/` directory and open the project file:  
    `video_passthrough_kria.xpr`
-3. Generate the bitstream:  
-   `Flow Navigator → Program and Debug → Generate Bitstream`
+3. Run synthesis, implementation and generate the bitstream:  
 4. Export the hardware design (with `.xsa`) for use in **Vitis** or JTAG loading:  
    `File → Export → Export Hardware (include bitstream)`
 
 ---
 
-### 🧪 Behavioral Simulation (Optional)
+### 🧪 Behavioral Simulation
 
 To simulate processing stages and observe switching behavior:
 
