@@ -1,6 +1,7 @@
-# 📟 FPGA Hand Centroid Detection on Xilinx Kria
+# 📟 FPGA Centroid Detection on Xilinx Kria
 
 This project implements a hardware-based algorithm for detecting the centroid (center of mass) of a human hand in a binary image. It uses contextual operations, color space conversion (RGB to YCbCr), thresholding, and 5x5 median filtering — all in Verilog, targeting the Xilinx Kria (KV260) FPGA platform.
+
 
 ## 🖐️ Hand Processing Pipeline Overview
 
@@ -10,6 +11,7 @@ from raw camera passthrough to binary segmentation and centroid detection:
 <p align="center">
   <img src="img/combined_hand_pipeline.png" width="100%"/>
 </p>
+
 
 ## 🔀 Switch Control (`sw[3:0]`)
 | sw | Output Channel                  |
@@ -22,16 +24,6 @@ from raw camera passthrough to binary segmentation and centroid detection:
 | 5  | Median filtered mask            |
 | 6  | Centroid after median filter    |
 
-## 🗂️ Project Structure
-
-```
-hand-center-of-mass-hdl/
-
-├── image-processing-kria/ # Verilog and Vivado files
-├── image_pipeline_codes/  # MATLAB/Python preprocessing scripts
-├── img/                   # Images for documentation
-└── README.md
-```
 
 ## ⚡ Key Capabilities
 
@@ -50,6 +42,7 @@ The `image_pipeline_codes/` directory contains MATLAB and Python scripts used to
 
 These tools help validate and visualize the expected hardware behavior.
 
+
 ## 🛠️ Getting Started
 ### 🔧 Vivado Hardware Setup
 
@@ -60,7 +53,6 @@ These tools help validate and visualize the expected hardware behavior.
 4. Export the hardware design (with `.xsa`) for use in **Vitis** or JTAG loading:  
    `File → Export → Export Hardware (include bitstream)`
 
----
 
 ### 🧪 Behavioral Simulation
 
@@ -75,8 +67,6 @@ Simulation artifacts will be located in:
 
 video_passthrough_kria/video_passthrough_kria.sim/sim_1/behav/xsim/
 
----
-
 
 ## 🧩 System Block Diagram
 
@@ -85,10 +75,9 @@ video_passthrough_kria/video_passthrough_kria.sim/sim_1/behav/xsim/
 </p>
 
 
-### 📚 Academic Context
+## 📚 Academic Context
 
 This project was developed as part of the *Reconfigurable Systems* course  
 at **AGH University of Science and Technology** in Kraków.
 
-> 💡 Focus was placed on implementing real-time image processing in Verilog,  
-> validating the design in simulation, and deploying it on an embedded FPGA platform.
+> 💡 Focus was placed on implementing real-time image processing in Verilog, validating the design in simulation, and deploying it on an embedded FPGA platform.
